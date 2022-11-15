@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  certcheck:
+    image: dmitriy8808/crlcheck
+    ports:
+      - "8090:80"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    volumes:
+      - ${APPDATA}\microsoft\UserSecrets\:/root/.microsoft/usersecrets
